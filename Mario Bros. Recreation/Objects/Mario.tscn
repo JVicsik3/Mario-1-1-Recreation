@@ -1,0 +1,330 @@
+[gd_scene load_steps=31 format=3 uid="uid://bufrmll137k4p"]
+
+[ext_resource type="Texture2D" uid="uid://bl60c4ut1jnjb" path="res://Sprites/Mario Sheet.png" id="1_sgipf"]
+[ext_resource type="Script" path="res://Scripts/MarioMovement.gd" id="1_tcv10"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mh0n2"]
+size = Vector2(10, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vlpxy"]
+size = Vector2(10, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ja7ok"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bucnm"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(16, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xng43"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(0, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3upy"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(96, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3fpi"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(0, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sr3i5"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(16, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ynkl"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(32, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wrs2"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iau5l"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(0, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glb4k"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(80, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjpcp"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dacbh"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(112, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o04o3"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(64, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rmuo"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h3wu"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(48, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4gcw"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(112, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjd8k"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgo3b"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdk5q"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urpy7"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(64, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7no7"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(80, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjlxv"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(96, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmgoa"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(16, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k86fd"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(32, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqkb8"]
+atlas = ExtResource("1_sgipf")
+region = Rect2(48, 32, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d0u6s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ja7ok")
+}],
+"loop": true,
+"name": &"crouchBig",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bucnm")
+}],
+"loop": true,
+"name": &"crouchFire",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xng43")
+}],
+"loop": true,
+"name": &"crouchSmall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3upy")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3fpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sr3i5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3fpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sr3i5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ynkl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sr3i5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ynkl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sr3i5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3fpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sr3i5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ynkl")
+}],
+"loop": true,
+"name": &"grow",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wrs2")
+}],
+"loop": true,
+"name": &"jumpBig",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iau5l")
+}],
+"loop": true,
+"name": &"jumpFire",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glb4k")
+}],
+"loop": true,
+"name": &"jumpSmall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjpcp")
+}],
+"loop": true,
+"name": &"skidBig",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dacbh")
+}],
+"loop": true,
+"name": &"skidFire",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o04o3")
+}],
+"loop": true,
+"name": &"skidSmall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rmuo")
+}],
+"loop": true,
+"name": &"standBig",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8h3wu")
+}],
+"loop": true,
+"name": &"standFire",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4gcw")
+}],
+"loop": true,
+"name": &"standSmall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjd8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgo3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdk5q")
+}],
+"loop": true,
+"name": &"walkBig",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urpy7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7no7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjlxv")
+}],
+"loop": true,
+"name": &"walkFire",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmgoa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k86fd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqkb8")
+}],
+"loop": true,
+"name": &"walkSmall",
+"speed": 12.0
+}]
+
+[node name="Mario" type="Node2D"]
+
+[node name="MarioCam" type="Camera2D" parent="."]
+position = Vector2(0, -28)
+zoom = Vector2(3, 3)
+
+[node name="MarioBody" type="CharacterBody2D" parent="."]
+script = ExtResource("1_tcv10")
+
+[node name="colliderSmall" type="CollisionShape2D" parent="MarioBody"]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_mh0n2")
+
+[node name="colliderBig" type="CollisionShape2D" parent="MarioBody"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_vlpxy")
+disabled = true
+
+[node name="colliderFire" type="CollisionShape2D" parent="MarioBody"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_vlpxy")
+disabled = true
+
+[node name="MarioSprites" type="AnimatedSprite2D" parent="MarioBody"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_d0u6s")
+animation = &"standSmall"
+autoplay = "standSmall"
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="MarioBody"]
+position = Vector2(0, -28)
+remote_path = NodePath("../../MarioCam")
